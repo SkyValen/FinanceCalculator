@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Kalkulaator</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lisa Finants Kirje</h1>
+        <div class="row">
+            <input type="text" id="title" placeholder="Nimi">
+            <input type="number" id="amount" placeholder="Kogusumma">
+            <input type="number" id="duration" placeholder="Kestus">
+            <input type="number" id="interval" placeholder="Intervall">
+            <select id="type">
+                <option value="income">Tulu</option>
+                <option value="expense">Kulu</option>
+            </select>
+        </div>
+        <div class="buttonCreate" onclick="addEntry()">Lisa Uus Kirje</div>
+    </div>
+    <div class="container">
+        <h1>Tulu</h1>
+        <div class="row" id="income-list">
+        </div>
+    </div>
+    <div class="container">
+        <h1>Kulu</h1>
+        <div class="row" id="expense-list">
+        </div>
+    </div>
+    <div class="charts">
+        <canvas id="incomeChart" class="chart"></canvas>
+        <canvas id="expenseChart" class="chart"></canvas>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

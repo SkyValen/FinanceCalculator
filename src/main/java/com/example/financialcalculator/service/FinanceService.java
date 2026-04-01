@@ -32,8 +32,8 @@ public class FinanceService {
     }
 
     public double calculateTotal(FinanceEntry entry) {
-        int interval = entry.getInterval();
-        int duration = entry.getDuration();
+        int interval = entry.getIntervalDays();
+        int duration = entry.getDurationDays();
 
         if (interval == 0) return 0;
 
